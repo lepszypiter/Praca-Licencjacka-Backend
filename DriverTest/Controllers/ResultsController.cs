@@ -17,7 +17,7 @@ public class ResultsController : ControllerBase
             _logger = logger;
         }
     // GET: api/ResultsController
-    [HttpGet]
+    //[HttpGet]
     public async Task<ActionResult<IEnumerable<DriverTest.Models.Results>>> GetResults()
         {
             _logger.LogInformation("GET: GetAllResults");
@@ -28,7 +28,7 @@ public class ResultsController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<DriverTest.Models.Results>> PostResults([FromForm]DriverTest.Models.Results results)
     {
-        _logger.LogInformation("POST: AddResults");
+        _logger.LogInformation("POST: AddResults {Name} {Age} {Score}", results.Name, results.Age, results.Score);
         await _resultRepositories.Add(results);
         await _resultRepositories.Save();
         return CreatedAtAction("GetResults", new { id = results.Id }, results);
