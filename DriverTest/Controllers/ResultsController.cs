@@ -26,7 +26,7 @@ public class ResultsController : ControllerBase
         }
     // POST: api/ResultsController
     [HttpPost]
-    public async Task<ActionResult<DriverTest.Models.Results>> PostResults(DriverTest.Models.Results results)
+    public async Task<ActionResult<DriverTest.Models.Results>> PostResults([FromForm]DriverTest.Models.Results results)
     {
         _logger.LogInformation("POST: AddResults");
         await _resultRepositories.Add(results);
