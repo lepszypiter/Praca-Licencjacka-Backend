@@ -29,8 +29,14 @@ public class ResultsController : ControllerBase
     public async Task<ActionResult<DriverTest.Models.Results>> PostResults([FromForm]DriverTest.Models.Results results)
     {
         _logger.LogInformation("POST: AddResults {Name} {Age} {Score}", results.Name, results.Age, results.Score);
+        if (_resultRepositories.CheckResultsExist(results.Id))
+        {
+            return BadRequest("Id already exists");
+        }
+        
         await _resultRepositories.Add(results);
         await _resultRepositories.Save();
+
         return CreatedAtAction("GetResults", new { id = results.Id }, results);
     }
     

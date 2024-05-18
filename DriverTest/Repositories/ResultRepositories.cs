@@ -32,4 +32,16 @@ class ResultRepositories : IResultRepositories
     {
         await _context.Results.AddAsync(results);
     }
+
+    public bool CheckResultsExist(Guid resultsId)
+    {
+        return _context.Results.Any(x => x.Id == resultsId);
+    }
+
+
+    async Task<bool> CheckResultsExistAsync(Guid resultsId)
+        {
+            return await _context.Results.AnyAsync(x => x.Id == resultsId);
+        }
+    
 }
