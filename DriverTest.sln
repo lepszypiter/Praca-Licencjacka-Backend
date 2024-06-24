@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverTest", "DriverTest\DriverTest.csproj", "{437DB746-0E06-426E-A57C-CD4A671E7521}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverTest.Tests", "DriverTest.Tests\DriverTest.Tests.csproj", "{A11E6AC4-02B4-424D-A020-C52985B5238C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{437DB746-0E06-426E-A57C-CD4A671E7521}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{437DB746-0E06-426E-A57C-CD4A671E7521}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{437DB746-0E06-426E-A57C-CD4A671E7521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A11E6AC4-02B4-424D-A020-C52985B5238C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A11E6AC4-02B4-424D-A020-C52985B5238C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A11E6AC4-02B4-424D-A020-C52985B5238C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A11E6AC4-02B4-424D-A020-C52985B5238C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
